@@ -73,7 +73,7 @@ params:
   homeInfoParams:
     Title: "Hello 👋"
     Content: >
-      I am a software developer based in Munich, Germany. This is my personal blog
+      I am a software developer based in Munich, Germany.
 
   socialIcons:
     - name: github
