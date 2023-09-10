@@ -80,6 +80,8 @@ params:
       url: "https://github.com/stefanwaldhauser"
     - name: linkedin
       url: "https://www.linkedin.com/in/stefan-waldhauser-41404b231/"
+    - name: email
+      url: "mailto:contact@stefanwaldhauser.me"
 
   # label:
   #     text: "Home"
