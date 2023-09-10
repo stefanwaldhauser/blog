@@ -1,1 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://stefanwaldhauser.github.io/categories/</loc></url><url><loc>https://stefanwaldhauser.github.io/</loc></url><url><loc>https://stefanwaldhauser.github.io/tags/</loc></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://blog.stefanwaldhauser.me/archives/</loc>
+  </url><url>
+    <loc>https://blog.stefanwaldhauser.me/categories/</loc>
+  </url><url>
+    <loc>https://blog.stefanwaldhauser.me/search/</loc>
+  </url><url>
+    <loc>https://blog.stefanwaldhauser.me/series/</loc>
+  </url><url>
+    <loc>https://blog.stefanwaldhauser.me/</loc>
+  </url><url>
+    <loc>https://blog.stefanwaldhauser.me/tags/</loc>
+  </url>
+</urlset>
