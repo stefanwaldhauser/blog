@@ -79,7 +79,7 @@ params:
     - name: github
       url: "https://github.com/stefanwaldhauser"
     - name: linkedin
-      url: "https://www.linkedin.com/in/stefan-waldhauser-41404b231/"
+      url: "www.linkedin.com/in/stefan-waldhauser"
     - name: email
       url: "mailto:contact@stefanwaldhauser.me"
 
