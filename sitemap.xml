@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.stefanwaldhauser.me/posts/lambda_db_connection_leak/</loc>
+    <lastmod>2024-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.stefanwaldhauser.me/tags/aws/</loc>
+    <lastmod>2024-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.stefanwaldhauser.me/tags/aws-lambda/</loc>
+    <lastmod>2024-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.stefanwaldhauser.me/tags/database/</loc>
+    <lastmod>2024-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.stefanwaldhauser.me/posts/</loc>
+    <lastmod>2024-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.stefanwaldhauser.me/</loc>
+    <lastmod>2024-05-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.stefanwaldhauser.me/tags/</loc>
+    <lastmod>2024-05-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://blog.stefanwaldhauser.me/archives/</loc>
   </url><url>
     <loc>https://blog.stefanwaldhauser.me/categories/</loc>
@@ -9,9 +30,5 @@
     <loc>https://blog.stefanwaldhauser.me/search/</loc>
   </url><url>
     <loc>https://blog.stefanwaldhauser.me/series/</loc>
-  </url><url>
-    <loc>https://blog.stefanwaldhauser.me/</loc>
-  </url><url>
-    <loc>https://blog.stefanwaldhauser.me/tags/</loc>
   </url>
 </urlset>
