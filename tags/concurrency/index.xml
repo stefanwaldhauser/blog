@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Stefan Waldhauser</title>
-    <link>https://blog.stefanwaldhauser.me/</link>
-    <description>Recent content on Stefan Waldhauser</description>
+    <title>Concurrency on Stefan Waldhauser</title>
+    <link>https://blog.stefanwaldhauser.me/tags/concurrency/</link>
+    <description>Recent content in Concurrency on Stefan Waldhauser</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>en</language>
     <lastBuildDate>Mon, 13 May 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.stefanwaldhauser.me/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.stefanwaldhauser.me/tags/concurrency/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lambda Learning: Prevent High Concurrency by Rate Limiting the Source Instead of Setting Reserved Concurrency</title>
       <link>https://blog.stefanwaldhauser.me/posts/lambda_learning_rate_limit/</link>
       <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
       <guid>https://blog.stefanwaldhauser.me/posts/lambda_learning_rate_limit/</guid>
       <description>How reserved concurrency can lead to unintended effects and what to do about it.</description>
-    </item>
-    <item>
-      <title>Application Side Database Connection Pooling can lead to a Connection Leak in an AWS Lambda Application</title>
-      <link>https://blog.stefanwaldhauser.me/posts/lambda_db_connection_leak/</link>
-      <pubDate>Sun, 05 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://blog.stefanwaldhauser.me/posts/lambda_db_connection_leak/</guid>
-      <description>How it happens and what you can do about it.</description>
     </item>
   </channel>
 </rss>

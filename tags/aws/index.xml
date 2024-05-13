@@ -4,10 +4,17 @@
     <title>AWS on Stefan Waldhauser</title>
     <link>https://blog.stefanwaldhauser.me/tags/aws/</link>
     <description>Recent content in AWS on Stefan Waldhauser</description>
-    <generator>Hugo -- 0.125.6</generator>
+    <generator>Hugo -- 0.125.7</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 05 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 13 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.stefanwaldhauser.me/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lambda Learning: Prevent High Concurrency by Rate Limiting the Source Instead of Setting Reserved Concurrency</title>
+      <link>https://blog.stefanwaldhauser.me/posts/lambda_learning_rate_limit/</link>
+      <pubDate>Mon, 13 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://blog.stefanwaldhauser.me/posts/lambda_learning_rate_limit/</guid>
+      <description>How reserved concurrency can lead to unintended effects and what to do about it.</description>
+    </item>
     <item>
       <title>Application Side Database Connection Pooling can lead to a Connection Leak in an AWS Lambda Application</title>
       <link>https://blog.stefanwaldhauser.me/posts/lambda_db_connection_leak/</link>
