@@ -30,6 +30,9 @@ However, in my experience relying solely on reserved concurrency is not ideal du
 - **What you might think happens:** The message remains in the queue until throttling stops and capacity is available and is then processed.
 - **What actually happens:** The message is processing fails, it is returned to the queue, and retried based on the redrive policy, retention policy, or sent to another SQS dead-letter queue (DLQ). This could lead to 'lost' messages if not handled appropiately.
 
+
+Although the above behaviour may not seem intuitive, it makes sense because clients are not supposed to be aware of internal resource management issues.
+
 ### Recommendation
 Instead of only setting reserved concurrency on the lambda functions, rate limit the event sources directly to achieve the desired behavior:
 
