@@ -20,18 +20,18 @@ By default, an AWS account can run a total of [1,000 concurrent Lambda instances
 
 To prevent this, you can configure [reserved concurrency](https://docs.aws.amazon.com/lambda/latest/dg/configuration-concurrency.html) for each Lambda function. This sets an upper limit on the number of concurrent instances for that specific function.
 
-However, in my experience relying on reserved concurrency is not ideal due to the unintended effects "Lambda Throttling" has on various Lambda event sources. Let's examine the expected versus actual behavior for two common event sources when throttling occurs:
+However, in my experience relying solely on reserved concurrency is not ideal due to the effect "Lambda Throttling" has on various Lambda event sources. Let's examine the expected versus actual behavior for two common event sources when throttling occurs:
 
 **API Gateway Events:**
-- **What you hope would happen:** The client receives a HTTP status code 429 (Rate Limit Exceeded) with a response body explaining the problem.
+- **What you might think happens:** The client receives a HTTP status code 429 (Rate Limit Exceeded) with a response body explaining the problem.
 - **What actually happens:** The client receives a HTTP status code 500 (Internal Server Error) with a response body stating "Internal Server Error". There is now no way for the client to differentiate this from any other internal server error.
 
 **SQS Events:**
-- **What you hope would happen:** The message remains in the queue until throttling stops and is then processed.
-- **What actually happens:** The message is marked 'unprocessable', returned to the queue, and retried based on the redrive policy, retention policy, or sent to another SQS dead-letter queue (DLQ). This could lead to 'lost' messages if not handled appropiately.
+- **What you might think happens:** The message remains in the queue until throttling stops and capacity is available and is then processed.
+- **What actually happens:** The message is processing fails, it is returned to the queue, and retried based on the redrive policy, retention policy, or sent to another SQS dead-letter queue (DLQ). This could lead to 'lost' messages if not handled appropiately.
 
 ### Recommendation
-Instead of setting reserved concurrency on the lambda functions, rate limit the event sources directly to achieve the desired behavior:
+Instead of only setting reserved concurrency on the lambda functions, rate limit the event sources directly to achieve the desired behavior:
 
 **API Gateway:**
 - Configure [rate limits on the endpoints](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html). [Customize the status code, header, and body for rate limit responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-gateway-response-using-the-console.html). By default a HTTP Status Code of 429 (Rate Limit Exceeded) will be sent by API Gateway.
@@ -41,4 +41,4 @@ Instead of setting reserved concurrency on the lambda functions, rate limit the 
 
 Depending on your use case, it might be useful to use reserved concurrency as a second layer of defense. It can act as a safeguard that should not be reached if the source rate limiting is correctly configured. If it is reached, it signals that you need to adjust your source rate limiting. A CloudWatch alarm can notify you when this limit is approached.
 
-If you decide to use reserved concurrency, be sure to test what happens to events when throttling occurs, as the results may surprise you. This behavior is not always clearly documented in the AWS docs, so some experimentation is necessary.
+If you decide to use reserved concurrency, be sure to test what happens to events when throttling occurs, as the results may surprise you. This behavior is not always clearly documented in the AWS docs in my experience, so some experimentation is necessary.
